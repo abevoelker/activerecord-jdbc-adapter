@@ -89,4 +89,11 @@ module ::ArJdbc
       true
     end
   end
+
+  extension :OpenEdge do |name|
+    if name =~ /openedge|progress/i
+      require 'arjdbc/openedge'
+      true
+    end
+  end
 end
